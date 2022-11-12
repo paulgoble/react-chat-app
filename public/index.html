@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+  <!-- HTML Head -->
+
+  <head>
+    <meta charset="utf-8">
+    <title>React Chat</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+      @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap');
+
+      body {
+        background-color: rgb(36,37,38);
+        color:#fff;
+        font-family: 'Montserrat', sans-serif;
+        font-size: x-large;
+        text-align: center;
+      }
+      input, button { 
+        border: 2px solid #666;
+        border-radius: 9px; padding: 9px; 
+        margin: 4px;
+      }
+      li {
+        margin: 0 0.5rem 0 -1rem;
+        list-style-type: none;
+        text-align: left;
+        padding: 5px;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+      .featured {
+        animation: 1.5s ease-in 0s 1 fadeIn;
+      }
+      .blue { 
+        color: #61dbfb; 
+      }
+      .user {
+        text-align: right;
+        margin-right: 1.5rem;
+      }
+      .window::-webkit-scrollbar {
+        width: 4px;
+      }
+      button:hover {
+        border-color: rgb(36,37,38)
+      }
+      #root {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <!-- HTML Body  -->
+
+  <body style="display: flex; flex-direction: column; justify-content: space-between;">
+    <header style="margin: 5vh auto 1rem">
+      <img src="./React-icon.svg.png" />
+      <h1 style="display: inline; margin-right: 15px;">React Chat</h1>
+      <p style="display: inline; font-family: Montserrat">Let's chat about React!</p>
+    </header>
+    <div id="root"></div>
+    <footer style="font-size: small; position: fixed; bottom: 20px; left: 0; right: 0;">
+      This app was painstakingly created using 
+      <a class="blue" href="https://reactjs.org/docs/react-without-jsx.html">React without JSX</a>.
+    </footer>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
